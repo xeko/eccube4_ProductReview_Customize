@@ -129,6 +129,17 @@
                                         {{ form_errors(form.comment) }}
                                     </div>
                                 </div>
+                                    
+                                <div class="row mb-2">
+                                    <div class="col-3">
+                                        <span>{{ '返信'|trans }}</span>
+                                    </div>
+                                    <div class="col">
+                                        {{ form_widget(form.reply, {'attr': {'rows': '6'}}) }}
+                                        {{ form_errors(form.reply) }}
+                                    </div>
+                                </div>
+                                    
                             </div>
                         </div>
                     </div>

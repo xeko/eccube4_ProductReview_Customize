@@ -114,6 +114,15 @@ class ProductReviewType extends AbstractType
                 'attr' => [
                     'maxlength' => $config['eccube_ltext_len'],
                 ],
+            ])
+            ->add('reply', TextareaType::class, [
+                'constraints' => [
+                    new Assert\NotBlank(),
+                    new Assert\Length(['max' => $config['eccube_ltext_len']]),
+                ],
+                'attr' => [
+                    'maxlength' => $config['eccube_ltext_len'],
+                ],
             ]);
     }
 }

@@ -124,6 +124,13 @@ class ProductReview extends AbstractEntity
      * })
      */
     private $Status;
+    
+    /**
+    * @var string
+    *
+    * @ORM\Column(name="reply", type="text", nullable=true)
+    */
+    private $reply;
 
     /**
      * Get id.
@@ -390,4 +397,26 @@ class ProductReview extends AbstractEntity
     {
         return $this->update_date;
     }
+    
+    /**
+     * Get reply.
+     *
+     * @return string
+     */
+    public function getReply() {
+        return $this->reply;
+    }
+
+    /**
+     * Set reply.
+     *
+     * @param string $reply
+     *
+     * @return ProductReview
+     */
+    public function setReply($reply) {
+        $this->reply = $reply;
+        return $this;
+    }
+
 }

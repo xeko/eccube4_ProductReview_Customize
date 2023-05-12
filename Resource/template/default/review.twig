@@ -133,6 +133,13 @@
 
                             <!--レビューコメント-->
                             <p>{{ ProductReview.comment|nl2br }}</p>
+                            <!--レビュー返事-->
+                            {% if ProductReview.reply %}
+                                <div class="review_reply">
+                                    <span class="text-info">お店からの返信</span>
+                                    <p>{{ ProductReview.reply|nl2br }}</p>
+                                </div>
+                            {% endif %}
                         </li>
                     {% endfor %}
                 </ul>
